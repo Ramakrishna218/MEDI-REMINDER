@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - My Medications</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <div class="container my-meds-container">
+
+        <!-- Header -->
+        <header class="page-header">
+            <a href="dashboard.html" class="back-btn-small"><i class="ri-arrow-left-line"></i></a>
+            <div>
+                <h2 class="page-title">My Medications</h2>
+                <p class="page-subtitle">6 active, 1 inactive</p>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <i class="ri-search-line"></i>
+            <input type="text" placeholder="Search medications...">
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <button class="tab active">All</button>
+            <button class="tab">Active</button>
+            <button class="tab">Inactive</button>
+        </div>
+
+        <!-- Medication List -->
+        <div class="medication-list" id="medicationList">
+            <!-- Items will be injected here by JS, but adding static ones for initial view based on image -->
+
+            <!-- Item 1 -->
+            <div class="med-list-card">
+                <div class="med-card-top">
+                    <div class="med-icon-box teal-light">
+                        <i class="ri-capsule-line"></i>
+                    </div>
+                    <div class="med-info">
+                        <h4>Lisinopril</h4>
+                        <p>10mg &middot; Once daily</p>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="med-card-middle">
+                    <div class="tag time-tag"><i class="ri-time-line"></i> 8:00 AM</div>
+                    <div class="tag status-tag active"><i class="ri-check-line"></i> Active</div>
+                </div>
+                <div class="med-card-bottom">
+                    <span>Take with water</span>
+                    <span class="refill-info">Refill: Mar 15, 2026</span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="med-list-card">
+                <div class="med-card-top">
+                    <div class="med-icon-box teal-light">
+                        <i class="ri-capsule-line"></i>
+                    </div>
+                    <div class="med-info">
+                        <h4>Metformin</h4>
+                        <p>500mg &middot; Twice daily</p>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="med-card-middle">
+                    <div class="tag time-tag"><i class="ri-time-line"></i> 8:00 AM, 8:00 PM</div>
+                    <div class="tag status-tag active"><i class="ri-check-line"></i> Active</div>
+                </div>
+                <div class="med-card-bottom">
+                    <span>Take with meals</span>
+                    <span class="refill-info">Refill: Feb 28, 2026</span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="med-list-card">
+                <div class="med-card-top">
+                    <div class="med-icon-box teal-light">
+                        <i class="ri-capsule-line"></i>
+                    </div>
+                    <div class="med-info">
+                        <h4>Atorvastatin</h4>
+                        <p>20mg &middot; Once daily</p>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="med-card-middle">
+                    <div class="tag time-tag"><i class="ri-time-line"></i> 1:00 PM</div>
+                    <div class="tag status-tag active"><i class="ri-check-line"></i> Active</div>
+                </div>
+                <div class="med-card-bottom">
+                    <span>Take after lunch</span>
+                    <span class="refill-info">Refill: Apr 10, 2026</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Floating Add Button -->
+        <div class="fixed-bottom-bar">
+            <a href="add-medication.html" class="btn-add-med">
+                <i class="ri-add-line"></i> Add New Medication
+            </a>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

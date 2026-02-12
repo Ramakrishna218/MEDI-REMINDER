@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <div class="container settings-container">
+
+        <!-- Header -->
+        <header class="page-header">
+            <a href="dashboard.html" class="back-btn-small"><i class="ri-arrow-left-line"></i></a>
+            <h2 class="page-title-center">Settings</h2>
+        </header>
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <div class="avatar-circle">MG</div>
+            <div class="profile-details">
+                <h3>Margaret Green</h3>
+                <p class="email">margaret.g@email.com</p>
+                <p class="joined">Member since Jan 2026</p>
+                <!-- Image implies user details here, can add DOB if needed or stick to design -->
+            </div>
+        </div>
+
+        <!-- Notifications Section -->
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="ri-notification-3-line"></i> Notifications</h3>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Push Notifications</h4>
+                    <p>Receive reminders on your device</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Alarm Sound</h4>
+                    <p>Play sound when medication is due</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Missed Dose Alerts</h4>
+                    <p>Get notified when you miss a dose</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Notify Caregivers</h4>
+                    <p>Alert caregivers on missed doses</p>
+                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Reminder Preferences -->
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="ri-time-line"></i> Reminder Preferences</h3>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Snooze Duration</h4>
+                    <p>How long to wait before re-reminding</p>
+                </div>
+                <select class="setting-select">
+                    <option>5 min</option>
+                    <option>10 min</option>
+                    <option>15 min</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Alarm Volume</h4>
+                    <p>Volume level for alarm sounds</p>
+                </div>
+                <select class="setting-select">
+                    <option>High</option>
+                    <option>Medium</option>
+                    <option>Low</option>
+                </select>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-text">
+                    <h4>Early Reminder</h4>
+                    <p>Notify before scheduled time</p>
+                </div>
+                <select class="setting-select">
+                    <option>None</option>
+                    <option>5 min before</option>
+                    <option>10 min before</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- General Section -->
+        <div class="settings-section">
+            <h3 class="settings-section-title"><i class="ri-global-line"></i> General</h3>
+
+            <a href="#" class="setting-link-item">
+                <div class="setting-icon-box teal-bg"><i class="ri-user-line"></i></div>
+                <div class="setting-text">
+                    <h4>Edit Profile</h4>
+                    <p>Name, photo, personal info</p>
+                </div>
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+
+            <a href="#" class="setting-link-item">
+                <div class="setting-icon-box orange-bg"><i class="ri-shield-keyhole-line"></i></div>
+                <div class="setting-text">
+                    <h4>Privacy & Security</h4>
+                    <p>Password, data sharing</p>
+                </div>
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+
+            <a href="#" class="setting-link-item">
+                <div class="setting-icon-box teal-bg"><i class="ri-question-line"></i></div>
+                <div class="setting-text">
+                    <h4>Help & Support</h4>
+                    <p>FAQs, contact support</p>
+                </div>
+                <i class="ri-arrow-right-s-line"></i>
+            </a>
+        </div>
+
+        <button class="logout-btn"><i class="ri-logout-box-r-line"></i> Log Out</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

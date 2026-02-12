@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - Caregivers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <div class="container caregivers-container">
+
+        <!-- Header -->
+        <header class="page-header">
+            <a href="dashboard.html" class="back-btn-small"><i class="ri-arrow-left-line"></i></a>
+            <h2 class="page-title">Caregivers</h2>
+            <p class="page-subtitle">4 contacts</p>
+        </header>
+
+        <!-- Primary Contacts Banner -->
+        <div class="primary-banner">
+            <h3 class="banner-title"><i class="ri-heart-line"></i> Primary Contacts</h3>
+            <p class="banner-text">These contacts will be notified if you miss medications</p>
+
+            <div class="primary-contact-card">
+                <div class="avatar-circle-sm">SJ</div>
+                <div class="contact-info">
+                    <h4>Sarah Johnson</h4>
+                    <p>(555) 123-4567</p>
+                </div>
+                <a href="tel:5551234567" class="icon-action-btn"><i class="ri-phone-line"></i></a>
+            </div>
+        </div>
+
+        <h3 class="section-heading">All Contacts</h3>
+
+        <!-- Contacts List -->
+        <div class="contact-list" id="contactList">
+
+            <!-- Contact 1 -->
+            <div class="contact-card">
+                <div class="contact-card-top">
+                    <div class="avatar-circle-md">SJ</div>
+                    <div class="contact-details">
+                        <div class="name-row">
+                            <h4>Sarah Johnson</h4>
+                            <i class="ri-star-fill star-icon"></i>
+                        </div>
+                        <span class="role-badge">Daughter</span>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:5551234567" class="btn-outline-action"><i class="ri-phone-line"></i> Call</a>
+                    <a href="mailto:sarah@email.com" class="btn-outline-action"><i class="ri-mail-line"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Contact 2 -->
+            <div class="contact-card">
+                <div class="contact-card-top">
+                    <div class="avatar-circle-md orange-bg">MS</div>
+                    <div class="contact-details">
+                        <div class="name-row">
+                            <h4>Dr. Michael Smith</h4>
+                            <!-- No star -->
+                        </div>
+                        <span class="role-badge">Primary Doctor</span>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:5559876543" class="btn-outline-action"><i class="ri-phone-line"></i> Call</a>
+                    <a href="mailto:doctor@email.com" class="btn-outline-action"><i class="ri-mail-line"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Contact 3 -->
+            <div class="contact-card">
+                <div class="contact-card-top">
+                    <div class="avatar-circle-md">RJ</div>
+                    <div class="contact-details">
+                        <div class="name-row">
+                            <h4>Robert Johnson</h4>
+                            <!-- No star -->
+                        </div>
+                        <span class="role-badge">Son</span>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:5551112222" class="btn-outline-action"><i class="ri-phone-line"></i> Call</a>
+                    <a href="mailto:robert@email.com" class="btn-outline-action"><i class="ri-mail-line"></i> Email</a>
+                </div>
+            </div>
+
+            <!-- Contact 4 -->
+            <div class="contact-card">
+                <div class="contact-card-top">
+                    <div class="avatar-circle-md teal-bg">NP</div>
+                    <div class="contact-details">
+                        <div class="name-row">
+                            <h4>Nurse Patricia</h4>
+                            <!-- No star -->
+                        </div>
+                        <span class="role-badge">Home Nurse</span>
+                    </div>
+                    <button class="more-options"><i class="ri-more-2-fill"></i></button>
+                </div>
+                <div class="contact-actions">
+                    <a href="tel:5553334444" class="btn-outline-action"><i class="ri-phone-line"></i> Call</a>
+                    <a href="mailto:nurse@email.com" class="btn-outline-action"><i class="ri-mail-line"></i> Email</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="fixed-bottom-bar">
+            <button class="btn-add-med">
+                <i class="ri-user-add-line"></i> Add Caregiver
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

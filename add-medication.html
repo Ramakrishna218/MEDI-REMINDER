@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - Add Medication</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <div class="container add-med-container">
+
+        <!-- Header with Close Button -->
+        <div class="modal-header">
+            <div>
+                <h2 class="modal-title">Add Medication</h2>
+                <p class="modal-subtitle">Enter the details of your new medication below.</p>
+            </div>
+            <a href="dashboard.html" class="close-btn"><i class="ri-close-line"></i></a>
+        </div>
+
+        <form id="addMedForm" class="add-med-form">
+
+            <div class="form-group">
+                <label for="medName">Medication Name</label>
+                <input type="text" id="medName" placeholder="e.g. BP tablet" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medDosage">Dosage</label>
+                <input type="text" id="medDosage" placeholder="e.g. 1 tablet" required>
+            </div>
+
+            <div class="form-group">
+                <label for="medFrequency">Frequency</label>
+                <select id="medFrequency" required>
+                    <option value="" disabled selected>Select frequency</option>
+                    <option value="Daily">Daily</option>
+                    <option value="Twice Daily">Twice Daily</option>
+                    <option value="Weekly">Weekly</option>
+                    <option value="As Needed">As Needed</option>
+                </select>
+                <i class="ri-arrow-down-s-line select-arrow"></i>
+            </div>
+
+            <div class="form-group">
+                <label for="medTime">Time</label>
+                <div class="time-input-wrapper">
+                    <input type="time" id="medTime" required>
+                    <!-- Icon is visually handled via CSS background or position if needed, keeping simple native input for now -->
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="medInstructions">Special Instructions</label>
+                <input type="text" id="medInstructions" placeholder="e.g., Take with food">
+            </div>
+
+            <button type="submit" class="btn btn-primary save-btn">Save Medication</button>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline script to handle form submission for this page specifically or utilize shared script.js
+        document.getElementById('addMedForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const startAdding = confirm("Save this medication?");
+            if (startAdding) {
+                // Here we would call a function from script.js to save data
+                saveMedicationFromForm();
+            }
+        });
+    </script>
+</body>
+
+</html>

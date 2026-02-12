@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - Alarm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="alarm-overlay" role="alertdialog" aria-modal="true" aria-labelledby="alarm-title">
+
+        <div class="alarm-content">
+
+            <div class="alarm-icon-animation">
+                <i class="ri-notification-3-fill"></i>
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring delay"></div>
+            </div>
+
+            <h2 id="alarm-title" class="alarm-title">Time to take your medication</h2>
+
+            <div class="alarm-med-info">
+                <h1 class="med-name-large">Atorvastatin</h1>
+                <p class="med-dose-large">20mg</p>
+                <p class="med-instructions">Take after lunch</p>
+                <p class="med-time-highlight">Scheduled for 1:00 PM</p>
+            </div>
+
+            <div class="alarm-actions">
+                <button class="btn-alarm-action taken" onclick="stopAlarmAndRedirect()">
+                    <i class="ri-check-line"></i> I Took It
+                </button>
+
+                <button class="btn-alarm-action snooze" onclick="stopAlarmAndRedirect()">
+                    <i class="ri-close-line"></i> Remind Me Later
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline init for separate alarm page to ensure sound starts immediately
+        document.addEventListener('DOMContentLoaded', () => {
+            // Fill alarm details from latest due alarm if available
+            try {
+                const raw = localStorage.getItem('currentAlarm');
+                if (raw) {
+                    const alarm = JSON.parse(raw);
+                    if (alarm) {
+                        const nameEl = document.querySelector('.med-name-large');
+                        const doseEl = document.querySelector('.med-dose-large');
+                        const instrEl = document.querySelector('.med-instructions');
+                        const timeEl = document.querySelector('.med-time-highlight');
+
+                        if (nameEl) nameEl.textContent = alarm.medication_name || 'Medication';
+                        if (doseEl) doseEl.textContent = alarm.dose || '';
+                        if (instrEl) instrEl.textContent = alarm.instructions || 'Time to take your medication';
+                        if (timeEl && alarm.scheduled_time) {
+                            timeEl.textContent = `Scheduled for ${alarm.scheduled_time}`;
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error('Failed to load current alarm from storage', e);
+            }
+
+            playAlarmSound();
+        });
+    </script>
+</body>
+
+</html>

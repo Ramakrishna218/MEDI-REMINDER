@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReminder - Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #f8f9fa;"> <!-- Light grey bg for dashboard contrast -->
+
+    <div class="container dashboard-container">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-top">
+                <div class="brand">
+                    <div class="logo-icon-small">
+                        <i class="ri-heart-pulse-fill"></i>
+                    </div>
+                    <div>
+                        <h2 class="brand-name">MediReminder</h2>
+                        <span class="brand-tag">Your health companion</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button class="icon-btn notification-btn">
+                        <i class="ri-notification-3-line"></i>
+                        <span class="badge">3</span>
+                    </button>
+                    <button class="icon-btn settings-btn" onclick="window.location.href='settings.html'">
+                        <i class="ri-settings-3-line"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="greeting-section">
+                <p class="greeting-text">Welcome,</p>
+                <h1 class="user-name">User</h1>
+                <!-- Date removed as per request "instead of... day,month and date" -->
+            </div>
+
+        </header>
+
+        <!-- Progress Card -->
+        <section class="progress-section">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <p class="progress-label">Today's Progress</p>
+                    <h2 class="progress-count">2 of 6</h2>
+                    <p class="progress-sub">medications taken</p>
+                </div>
+                <div class="progress-circle">
+                    <!-- Simple SVG or CSS circle representation -->
+                    <div class="circle-content">33%</div>
+                    <svg class="progress-ring" width="80" height="80">
+                        <circle class="progress-ring__circle" stroke="white" stroke-width="6" fill="transparent" r="34"
+                            cx="40" cy="40" />
+                        <circle class="progress-ring__circle--value" stroke="rgba(255,255,255,0.3)" stroke-width="6"
+                            fill="transparent" r="34" cx="40" cy="40" />
+                    </svg>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" style="width: 33%"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Status Cards -->
+        <section class="status-grid">
+            <div class="status-card taken">
+                <div class="status-icon"><i class="ri-checkbox-circle-line"></i></div>
+                <h3>2</h3>
+                <p>Taken</p>
+            </div>
+            <div class="status-card remaining">
+                <div class="status-icon"><i class="ri-time-line"></i></div>
+                <h3>4</h3>
+                <p>Remaining</p>
+            </div>
+            <div class="status-card missed">
+                <div class="status-icon"><i class="ri-error-warning-line"></i></div>
+                <h3>0</h3>
+                <p>Missed</p>
+            </div>
+        </section>
+
+        <!-- Next Reminder -->
+        <section class="section-block">
+            <h3 class="section-title">Next Reminder</h3>
+            <div class="med-card highlight-card">
+                <div class="med-icon-box orange">
+                    <i class="ri-notification-2-fill"></i>
+                </div>
+                <div class="med-details">
+                    <h4>Atorvastatin</h4>
+                    <p>20mg &middot; Take after lunch</p>
+                </div>
+                <div class="med-time">
+                    <i class="ri-time-line"></i> 1:00 PM
+                </div>
+            </div>
+        </section>
+
+        <!-- Today's Schedule -->
+        <section class="section-block">
+            <div class="section-header">
+                <h3 class="section-title">Today's Schedule</h3>
+                <a href="#" class="view-all">View All <i class="ri-arrow-right-s-line"></i></a>
+            </div>
+
+            <!-- 8:00 AM Group -->
+            <div class="time-group">
+                <div class="time-label"><i class="ri-time-line"></i> 8:00 AM <span class="badge-pill">All taken</span>
+                </div>
+
+                <div class="med-card done">
+                    <div class="checkbox-box checked">
+                        <i class="ri-check-line"></i>
+                    </div>
+                    <div class="med-details">
+                        <h4 class="strikethrough">Lisinopril</h4>
+                        <p>10mg &middot; Take with water</p>
+                    </div>
+                    <span class="status-text">Done</span>
+                </div>
+            </div>
+
+            <!-- 1:00 PM Group -->
+            <div class="time-group">
+                <div class="time-label"><i class="ri-time-line"></i> 1:00 PM</div>
+
+                <div class="med-card">
+                    <div class="med-icon-box grey">
+                        <i class="ri-capsule-line"></i>
+                    </div>
+                    <div class="med-details">
+                        <h4>Atorvastatin</h4>
+                        <p>20mg &middot; Take after lunch</p>
+                    </div>
+                    <button class="btn-take">Take</button>
+                </div>
+
+                <div class="med-card">
+                    <div class="med-icon-box grey">
+                        <i class="ri-capsule-line"></i>
+                    </div>
+                    <div class="med-details">
+                        <h4>Aspirin</h4>
+                        <p>81mg &middot; Take with food</p>
+                    </div>
+                    <button class="btn-take">Take</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="section-block">
+            <h3 class="section-title">Quick Actions</h3>
+            <div class="quick-actions-grid">
+                <div class="action-card" onclick="window.location.href='my-medications.html'">
+                    <div class="action-icon teal-light"><i class="ri-capsule-fill"></i></div>
+                    <h4>My Medications</h4>
+                    <p>View all medications</p>
+                </div>
+                <div class="action-card" onclick="window.location.href='calendar.html'">
+                    <div class="action-icon orange-light"><i class="ri-calendar-event-fill"></i></div>
+                    <h4>Calendar</h4>
+                    <p>Weekly schedule</p>
+                </div>
+                <div class="action-card" onclick="window.location.href='caregivers.html'">
+                    <div class="action-icon teal-light"><i class="ri-group-fill"></i></div>
+                    <h4>Caregivers</h4>
+                    <p>Manage contacts</p>
+                </div>
+                <div class="action-card" onclick="window.location.href='alarm.html'">
+                    <div class="action-icon red-light"><i class="ri-volume-up-fill"></i></div>
+                    <h4>Test Alarm</h4>
+                    <p>Preview reminder</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Floating Action Button placeholder (or fixed bottom button) -->
+        <div style="height: 80px;"></div> <!-- Spacer -->
+        <div class="fixed-bottom-bar">
+            <button class="btn-add-med" onclick="window.location.href='add-medication.html'">
+                <i class="ri-add-line"></i> Add New Medication
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
